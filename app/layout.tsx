@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import TwSizeIndicator from "@/components/TwSizeIndicator";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Toaster position="top-center" reverseOrder={false} />
+        <TwSizeIndicator />
         <Footer />
         <WhatsAppIcon />
       </body>
